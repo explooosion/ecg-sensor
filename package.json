@@ -14,6 +14,7 @@
   "license": "ISC",
   "description": "experimental project.",
   "dependencies": {
+    "@serialport/list": "^1.1.4",
     "@serialport/parser-readline": "^2.0.2",
     "dotenv": "^6.2.0",
     "moment": "^2.24.0",
