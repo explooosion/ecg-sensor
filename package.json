@@ -1,0 +1,23 @@
+{
+  "name": "terminal-sensor",
+  "version": "1.0.0",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "ecg": "node --no-warnings ecg.js",
+    "emg": "node --no-warnings emg.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "experimental project.",
+  "dependencies": {
+    "@serialport/parser-readline": "^2.0.2",
+    "dotenv": "^6.2.0",
+    "moment": "^2.24.0",
+    "select-shell": "^1.1.2",
+    "serialport": "^7.1.4"
+  }
+}
