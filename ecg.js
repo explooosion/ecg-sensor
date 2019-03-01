@@ -25,14 +25,16 @@ exec('serialport-list -f json', (err, stdout, stderr) => {
 
     // 新增終端機選單項目
     JSON.parse(stdout)
-        .forEach(({ comName }) => select.option(comName));
+        .forEach(({ comName, manufacturer }) =>
+            select.option(manufacturer ? `${comName}(${manufacturer})` : comName)
+        );
 
     // 顯示終端機選單
     console.log('\n=============================');
     console.log('\nPlease choose the serial port:\n');
     select.list();
 
-    select.on('select', (res) => worker(res[0]));
+    select.on('select', (res) => worker(String(res[0].value).split('(')[0]));
     select.on('cancel', () => process.exit(0));
 });
 
