@@ -11,7 +11,6 @@ const exec = require('child_process').exec;
 
 let DATA = [];
 
-// npm install -g @serialport/list
 exec('serialport-list -f json', (err, stdout, stderr) => {
 
     if (err) return console.log(err);
@@ -42,8 +41,7 @@ exec('serialport-list -f json', (err, stdout, stderr) => {
  * Start to work Sensor
  * @param {string} value serialport
  */
-function worker({ value }) {
-
+function worker(value) {
     const sensor = new ECGSensor({ port: value });
 
     sensor.run(data => {
