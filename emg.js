@@ -11,7 +11,7 @@ const exec = require('child_process').exec;
 
 let DATA = [];
 
-exec('ls /dev/tty.*', (err, stdout, stderr) => {
+exec('serialport-list -f json', (err, stdout, stderr) => {
 
     if (err) return console.log(err);
 
@@ -23,9 +23,8 @@ exec('ls /dev/tty.*', (err, stdout, stderr) => {
     });
 
     // 新增終端機選單項目
-    stdout.split(/\n/)
-        .filter(d => d !== '')
-        .forEach(d => select.option(d.trim()));
+    JSON.parse(stdout)
+        .forEach(({ comName }) => select.option(comName));
 
     // 顯示終端機選單
     console.log('\n=============================');
