@@ -1,4 +1,4 @@
-# terminal-sensor
+# ecg-sensor
 
 個人實驗專案，使用 Arduino + AD8283 進行資料搜集。
 
@@ -20,7 +20,7 @@ serialport-list
 
 ## 環境變數
 
-參考 .env.example，自行在同目錄底下建立 .env。
+參考 `.env.example`，自行在同目錄底下建立 `.env`。
 並輸入「受試者姓名」與「第幾階段實驗」。
 
 例如：
