@@ -4,6 +4,10 @@
 
 以 Node.js 為後端，支援 `Windows`, `macOS`。
 
+1. [ecg-sensor](https://github.com/explooosion/ecg-sensor) - 接收設備資料之專案。
+2. [ecg-split](https://github.com/explooosion/ecg-split) - 將資料以指定分鐘數切割，用於計算 QRS 波。
+3. [ecg-convert](https://github.com/explooosion/ecg-convert) - 將資料轉換成純數值，用於 Matlab。
+
 ## 安裝
 
 請先安裝 serialport 套件。
